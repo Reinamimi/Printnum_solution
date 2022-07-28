@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+<body>
+    <!-- 1. Shams Tiidelab
+    Write a program that uses console.log to print all the numbers from 1 to 200, with two exceptions. 
+    For numbers divisible by 6, print "Shams" instead of the number, 
+    and for numbers divisible by 8 (and not 6), print "TIIDELAB" instead. 
+    When you have that working, modify your program to print 
+    "ShamsTIIDELAB" for numbers that are divisible by both 6 and 8 (and still print "Shams" or 
+    "TIIDELAB" for numbers divisible by only one of those).  
+    (This is actually an interview question that has been claimed to weed out a significant percentage of 
+    programmer candidates. So if you solved it, your labour market value just went up.)  
+        
+    -->
+   
+
+    <script>
+
+        // Function to print numbers from 1 - 200 (using "start" and "end" parameters )
+        function numCount(start, end) {
+            for(let i = start; i <= end; i++) {
+                switch(true) {
+                    // for numbers divisible by 6 and not 8
+                    case ((i % 6 == 0) && (i % 8 != 0)):
+                        console.log("Shams")
+                        break;
+
+                    // for numbers divisible by 8 and not 6    
+                    case ((i % 8 == 0) && (i % 6 != 0)):
+                        console.log("TIIDELAB")
+                        break;  
+
+                    // for numbers divisible by both 6 and 8     
+                    case ((i % 8 == 0) && (i % 6 == 0)):    
+                        console.log("ShamsTIIDELAB")
+                        break;
+
+                    default: 
+                        console.log(i)    
+                           
+                }
+            }
+        }
+        numCount(1, 200)  
+
+       
+    </script>
+</body>
+</html>
